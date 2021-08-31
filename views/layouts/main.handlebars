@@ -4,26 +4,24 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Just Tech News</title>
+  <title>Tech Blog</title>
   <link rel="stylesheet" href="/stylesheets/style.css">
 </head>
 
 <body>
   <div class="wrapper">
-    <header>
+    <header class = "welcome">
       <h1>
-        <a href="/">Just Tech News</a>
+        <a class="tech" href="/">Tech Blog</a>
       </h1>
-    
-      <nav>
+      <nav class = "navi">
         {{#if loggedIn}}
         <a href="/dashboard">dashboard</a>
         <button id="logout" class="btn-no-style">logout</button>
         {{else}}
         <a href="/login">login</a>
         {{/if}}
-        </nav>
-
+      </nav>
     </header>
     <main>
       {{{ body }}}
@@ -32,11 +30,10 @@
       Thanks for visiting!
     </footer>
   </div>
-
+  
   {{#if loggedIn}}
   <script src="/javascript/logout.js"></script>
   {{/if}}
-
 </body>
 
 </html>
